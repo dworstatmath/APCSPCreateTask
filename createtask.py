@@ -55,7 +55,7 @@ def game(startingmoney):
                 placement.append(llamapos[llama])
             placement.sort()
             for i in range(len(placement)):
-                print(colorcodes[list(llamapos.keys())[list(llamapos.values()).index(placement[len(placement)-1-i])]]+str(i+1)+". "+list(llamapos.keys())[list(llamapos.values()).index(placement[len(placement)-1-i])])
+                print(colorcodes[list(llamapos.keys())[list(llamapos.values()).index(placement[len(placement)-1-i])]]+str(i+1)+". "+list(llamapos.keys())[list(llamapos.values()).index(placement[len(placement)-1-i])]+(" "*(10-len(list(llamapos.keys())[list(llamapos.values()).index(placement[len(placement)-1-i])])))+"\033[0m"+str(round(placement[len(placement)-1-i]*100)/100)+"m")
 
             frameadd()
             for llama in llamacolors:
